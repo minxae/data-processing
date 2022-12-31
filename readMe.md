@@ -458,7 +458,17 @@ Updates the values country for the given ID in the meta data.
 > </root>
 > ````
 
-### Delete gniMaleData/gniFemaleData
+### Delete country data
+
+Deletes all the data from a given country.
 
 > <code>DELETE</code>
+>
+> **ENDPOINT**: `/gniMale/:id`
+>
+> **ENDPOINT**: `/gniFemale:id`
+>
+> **ENDPOINT**: `/gdp:id`
+>
+> **PARAMS**: id
 
