@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css" >
+    <title>Home</title>
+</head>
+<body>
+    <div id="countrySelectionDiv">
+        <select name="countries" id="countrySelection">
+            <option value="1">Nederland</option>
+        </select>
+        <button id="submitSelectionBtn">Show</button>
+    </div>
+    <div id="gniChartContainer">
+        <h1>Gni Data</h1>
+        <canvas id="gniChart"></canvas>
+    </div>
+    <div id="gdpChartContainer">
+        <h1>GDP Data</h1>
+        <canvas id="gdpChart"></canvas>
+    </div>'
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/static/js/apiHelper.js"></script>
+<script src="/static/js/main.js"></script>
+</html>

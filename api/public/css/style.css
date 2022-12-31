@@ -1,0 +1,9 @@
+#gdpChartContainer, #gniChartContainer {
+    width: 50%;
+    float: left;
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:dimgray;
+}

@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "metaData": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "countryId": {
+            "type": "integer"
+          },
+          "1995": {
+            "type": "integer"
+          },
+          "2000": {
+            "type": "integer"
+          },
+          "2005": {
+            "type": "integer"
+          },
+          "2010": {
+            "type": "integer"
+          },
+          "2011": {
+            "type": "integer"
+          },
+          "2012": {
+            "type": "integer"
+          },
+          "2013": {
+            "type": "integer"
+          },
+          "2014": {
+            "type": "integer"
+          },
+          "2015": {
+            "type": "integer"
+          },
+          "2016": {
+            "type": "integer"
+          },
+          "2017": {
+            "type": "integer"
+          },
+          "2018": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "countryId",
+          "1995",
+          "2000",
+          "2005",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "metaData",
+      "data"
+    ],
+    "additionalProperties": false
+  }

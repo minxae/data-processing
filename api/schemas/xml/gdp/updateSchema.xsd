@@ -1,0 +1,35 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:short" name="_1990"/>
+              <xs:element type="xs:short" name="_1995"/>
+              <xs:element type="xs:short" name="_2000"/>
+              <xs:element type="xs:short" name="_2005"/>
+              <xs:element type="xs:short" name="_2010"/>
+              <xs:element type="xs:short" name="_2011"/>
+              <xs:element type="xs:short" name="_2012"/>
+              <xs:element type="xs:short" name="_2013"/>
+              <xs:element type="xs:short" name="_2014"/>
+              <xs:element type="xs:short" name="_2015"/>
+              <xs:element type="xs:short" name="_2016"/>
+              <xs:element type="xs:short" name="_2017"/>
+              <xs:element type="xs:short" name="_2018"/>
+              <xs:element type="xs:byte" name="countryId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="metaData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="id"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
