@@ -12,8 +12,9 @@ router.get("/", async (req, res) => {
         let result = await crud.getAll();
         res.send(result);
     } catch(err) {
+        res.statusMessage = "Something went wrong with getting the data from the database, please contact the Api owner";
         res.status(500);
-        res.send("Something went wrong with getting the data from the database, please contact the Api owner");
+        res.send();
     }
 });
 
@@ -27,10 +28,11 @@ router.get("/:id", async (req, res) => {
         res.send(country);
     } catch(err) {
         if(err = 404) {
-            res.status(404).send("No rows found with given id");
+            res.statusMessage = "No rows found with given id";
+            res.status(404).send();
         }
         res.statusMessage = err;
-        res.status(400).send(err);
+        res.status(400).send();
     }
 });
 
@@ -63,7 +65,7 @@ router.put("/", validator.validate("updateCountry"), async (req, res) => {
         res.sendStatus(status);
     } catch(err) {
         res.statusMessage = err;
-        res.status(400).send(err);
+        res.status(400).send();
     }
 });
 
@@ -76,7 +78,8 @@ router.delete("/:id", async (req, res) => {
         let status = await crud.delete(id);
         res.sendStatus(status);
     } catch(err) {
-        res.status(400).send(err);
+        res.statusMessage = err;
+        res.status(400).send();
     }
 });
 
