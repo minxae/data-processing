@@ -63,7 +63,7 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 
 ><code>GET</code>
 >
->**ENDPOINT**: `/country`
+>**ENDPOINT**: http://localhost:3030/country
 >
 >***Result***:
 >
@@ -101,7 +101,7 @@ Gets the country by its ID and returns the name of the country.
 
 > <code>GET</code>
 >
-> **ENDPOINT**: `/country/:id`
+> **ENDPOINT**: http://localhost:3030/country/:id
 >
 > **PARAMS**: id
 >
@@ -122,7 +122,7 @@ Adds a country to the country list.
 
 > <code>POST</code>
 >
-> **ENDPOINT**: `/country`
+> **ENDPOINT**: http://localhost:3030/country
 >
 > **JSON**:
 >
@@ -148,7 +148,7 @@ Updates the country name by given ID.
 
 > <code>PUT</code>
 >
-> **ENDPOINT**: `/country`
+> **ENDPOINT**: http://localhost:3030/country
 >
 > **JSON**:
 >
@@ -176,7 +176,7 @@ Deletes a country by given ID.
 
 > <code>DELETE</code>
 >
-> **ENDPOINT**: /country/:id
+> **ENDPOINT**: http://localhost:3030/country
 >
 > **PARAMS**: id
 
@@ -188,11 +188,11 @@ Returns all data from a the **gniMale**, **gniFemale** or **gdp** table includin
 
 ><code>GET</code>
 >
->**ENDPOINT**: `/gniMale`
+>**ENDPOINT**: http://localhost:3030/gniMale
 >
->**ENDPOINT**: `/gniFemale`
+>**ENDPOINT**: http://localhost:3030/gniFemale
 >
->**ENDPOINT**: `/gdp`
+>**ENDPOINT**: http://localhost:3030/gdp
 >
 >**Result**:
 >
@@ -273,11 +273,11 @@ Returns all the data per year from **one** country.
 
 > <code>GET</code>
 >
-> **ENDPOINT**: `/gniMale/:id`
+> **ENDPOINT**: http://localhost:3030/gniMale/:id
 >
-> **ENDPOINT**: `/gniFemale/:id`
+> **ENDPOINT**: http://localhost:3030/gniFemale/:id
 >
-> **ENDPOINT**: `/gdp/:id`
+> **ENDPOINT**: http://localhost:3030/gdp/:id
 >
 > **PARAMS**: id
 >
@@ -310,11 +310,11 @@ Gets a country based on the **countryId** instead of row ID.
 
 > <code>GET</code>
 >
-> **ENDPOINT**: `/gniMale/byCountryId/:id`
+> **ENDPOINT**: http://localhost:3030/gniMale/byCountryId/:id
 >
-> **ENDPOINT**: `/gniFemale/byCountryId/:id`
+> **ENDPOINT**: http://localhost:3030/gniFemale/byCountryId/:id
 >
-> **ENDPOINT**: `/gdp/byCountryId/:id`
+> **ENDPOINT**: http://localhost:3030/gdp/byCountryId/:id
 >
 > **PARAMS**: id
 >
@@ -347,11 +347,11 @@ Add a country with a country ID and the values per year.
 
 > <code>POST</code>
 >
-> **ENDPOINT**: `/gniMale`
+> **ENDPOINT**: http://localhost:3030/gniMale
 >
-> **ENDPOINT**: `/gniFemale`
+> **ENDPOINT**: http://localhost:3030/gniFemale
 >
-> **ENDPOINT**: `/gdp`
+> **ENDPOINT**: http://localhost:3030/gdp
 >
 > **JSON**:
 >
@@ -403,11 +403,11 @@ Updates the values country for the given ID in the meta data.
 
 > <code>PUT</code>
 >
-> **ENDPOINT**: `/gniMale`
+> **ENDPOINT**: http://localhost:3030/gniMale
 >
-> **ENDPOINT**: `/gniFemale`
+> **ENDPOINT**: http://localhost:3030//gniFemale
 >
-> **ENDPOINT**: `/gdp`
+> **ENDPOINT**: http://localhost:3030//gdp
 >
 > **JSON**:
 >
@@ -464,11 +464,11 @@ Deletes all the data from a given country.
 
 > <code>DELETE</code>
 >
-> **ENDPOINT**: `/gniMale/:id`
+> **ENDPOINT**: http://localhost:3030/gniMale/:id
 >
-> **ENDPOINT**: `/gniFemale:id`
+> **ENDPOINT**: http://localhost:3030/gniFemale:id
 >
-> **ENDPOINT**: `/gdp:id`
+> **ENDPOINT**: http://localhost:3030/gdp:id
 >
 > **PARAMS**: id
 
