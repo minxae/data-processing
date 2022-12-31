@@ -18,12 +18,6 @@ Om de modules te installeren moet u de volgende commando uitvoeren in uw termina
 npm i
 ```
 
-
-
-### 
-
-
-
 # UI
 
 Om de data te kunnen weergeven kunt u naar de endpoint /home gaan. Hier krijgt u een menu te zien waar u uit alle landen kunt kiezen, u krijgt dan alle GNI en GDP data van dit land te zien in 2 grafieken.
@@ -432,8 +426,10 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 >     </metaData>
 > </root>
 > ````
->
-> 
+
+### Delete gniMaleData/gniFemaleData
+
+> <code>DELETE</code>
 
 ## GdpData
 
@@ -524,6 +520,3 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 >
 > PARAMS: id
 
-# XML
-
-Vanwege tijdsgebrek ben ik helaas niet aan toegekomen om alle XML goed af te kunnen handelen. Het is op het moment wel mogelijk om XML data naar de API op kunnen sturen, deze wordt alleen nu nog omgezet naar JSON en zo gevalideerd. De opgestuurde XML data wordt dus nog niet gevalideerd tegen een XSD schema maar tegen een JSON schema.
