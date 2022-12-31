@@ -22,7 +22,7 @@ npm i
 
 Om de data te kunnen weergeven kunt u naar de endpoint /home gaan. Hier krijgt u een menu te zien waar u uit alle landen kunt kiezen, u krijgt dan alle GNI en GDP data van dit land te zien in 2 grafieken.
 
-```
+```javascript
 URL: http://localhost:3030/home/
 ```
 
@@ -30,7 +30,7 @@ URL: http://localhost:3030/home/
 
 Om de API te starten voert u het volgende commando uit in de terminal van uw IDE:
 
-```
+```javascript
 node app.js
 ```
 Zorg ervoor dat u in de map data-processing/api zit voordat u dit commando uitvoert!
@@ -39,7 +39,7 @@ Zorg ervoor dat u in de map data-processing/api zit voordat u dit commando uitvo
 
 In het mapje database vindt u de gehele SQL file om de database te kunnen importeren, van belang is dat indien u een andere gebruikersnaam / wachtwoord heeft voor uw database deze worden aangepast in de CURD.js file. 
 
-```
+```javascript
 let con = sql.createConnection({
     host: "localhost",
     user: "OWN_USERNAME", -> *Often "root"*
@@ -97,6 +97,8 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 
 ### Get country by id
 
+Gets the country by its ID and returns the name of the country.
+
 > <code>GET</code>
 >
 > **ENDPOINT**: `/country/:id`
@@ -115,6 +117,8 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 > 
 
 ### Add country
+
+Adds a country to the country list.
 
 > <code>POST</code>
 >
@@ -139,6 +143,8 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 > 
 
 ### Update country
+
+Updates the country name by given ID.
 
 > <code>PUT</code>
 >
@@ -166,21 +172,27 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 
 ### Delete country
 
+Deletes a country by given ID.
+
 > <code>DELETE</code>
 >
 > **ENDPOINT**: /country/:id
 >
 > **PARAMS**: id
 
-## GniMale/Female
+## GNI / GDP
 
-### Get all gniMaleData/gniFemaleData
+### Get all data from  GNI or  GDP 
+
+Returns all data from a the **gniMale**, **gniFemale** or **gdp** table including countryId for futher usage.
 
 ><code>GET</code>
 >
 >**ENDPOINT**: `/gniMale`
 >
 >**ENDPOINT**: `/gniFemale`
+>
+>**ENDPOINT**: `/gdp`
 >
 >**Result**:
 >
@@ -249,18 +261,23 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 >        "2018": 6407,
 >        "id": 4,
 >        "countryId": 4
->    },
+>    }
+>    .........
 >```
 >
 >
 
-### Get gniMaleData /gniFemaleData by Id
+### Get single country data by Id
+
+Returns all the data per year from **one** country.
 
 > <code>GET</code>
 >
 > **ENDPOINT**: `/gniMale/:id`
 >
 > **ENDPOINT**: `/gniFemale/:id`
+>
+> **ENDPOINT**: `/gdp/:id`
 >
 > **PARAMS**: id
 >
@@ -287,11 +304,17 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 >
 > 
 
-### Get gniMaleData/gniaFemaleData by countryId
+### Get  by countryId
+
+Gets a country based on the **countryId** instead of row ID.
 
 > <code>GET</code>
 >
 > **ENDPOINT**: `/gniMale/byCountryId/:id`
+>
+> **ENDPOINT**: `/gniFemale/byCountryId/:id`
+>
+> **ENDPOINT**: `/gdp/byCountryId/:id`
 >
 > **PARAMS**: id
 >
@@ -318,13 +341,17 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 >
 > 
 
-### Add gniMaleData/gniFemaleData country 
+### Add  country  and  data
+
+Add a country with a country ID and the values per year.
 
 > <code>POST</code>
 >
 > **ENDPOINT**: `/gniMale`
 >
 > **ENDPOINT**: `/gniFemale`
+>
+> **ENDPOINT**: `/gdp`
 >
 > **JSON**:
 >
@@ -370,13 +397,17 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 >
 > 
 
-### Update gniMaleData/gniFemaleData
+### Update country values
+
+Updates the values country for the given ID in the meta data.
 
 > <code>PUT</code>
 >
 > **ENDPOINT**: `/gniMale`
 >
 > **ENDPOINT**: `/gniFemale`
+>
+> **ENDPOINT**: `/gdp`
 >
 > **JSON**:
 >
@@ -430,93 +461,4 @@ Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint word
 ### Delete gniMaleData/gniFemaleData
 
 > <code>DELETE</code>
-
-## GdpData
-
-### Get all gdpData
-
->ENDPOINT: /gdp/getAll
->
->REQUEST: GET
-
-### Get gdpData by Id
-
-> ENDPOINT: /gdp/:id
->
-> REQUEST: GET
->
-> PARAMS: id
-
-### Get gdpData by countryId
-
-> ENDPOINT: /gdp/byCountryId/:id
->
-> REQUEST: GET
->
-> PARAMS: id
-
-### Add gdpData
-
-> ENDPOINT: /gdp/add
->
-> REQUEST: POST
->
-> JSON:
->
-> ```
-> {
->     "countryId": 1,
->     "1990": 1990,
->     "1995": 1995,
->     "2000": 2000,
->     "2005": 2005,
->     "2010": 2010,
->     "2011": 2011,
->     "2012": 2012,
->     "2013": 2013,
->     "2015": 2015,
->     "2016": 2016,
->     "2017": 2017,
->     "2018": 2018
-> }
-> ```
-
-### Update gdpData
-
-> ENDPOINT: /gdp/update
->
-> REQUEST: PUT
->
-> JSON:
->
-> ``` 
-> {
->     "metaData": {
->         "id": 1
->     },
->     "data" {
->         "countryId": 1,
->         "1990": 1990,
->         "1995": 1995,
->         "2000": 2000,
->         "2005": 2005,
->         "2010": 2010,
->         "2011": 2011,
->         "2012": 2012,
->         "2013": 2013,
->         "2015": 2015,
->         "2016": 2016,
->         "2017": 2017,
->         "2018": 2018
->     }
-> }
-> ```
-
-### Delete gdpData
-
-> ENDPOINT: /gdp/delete/:id
->
-> REQUEST: DELETE
->
-> PARAMS: id
 
