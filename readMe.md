@@ -2,7 +2,7 @@
 
 # Info
 
-Deze API is geschreven in javascript met behulp van NodeJS, via NodeJS is er gebruik gemaakt van verschillende modules die kunnen worden geïnstalleerd doormiddel van NodeJS. Het project bestaat uit de API zelf en de database waarin alle informatie wordt opgeslagen. 
+Deze API is geschreven in javascript met behulp van NodeJS, via NodeJS is er gebruik gemaakt van verschillende modules die kunnen worden geïnstalleerd doormiddel van Node. Het project bestaat uit de API zelf en de database waarin alle informatie wordt opgeslagen. 
 
 # NodeJs
 
@@ -10,7 +10,7 @@ Om NodeJs te installeren kunt u naar de volgende website gaan: https://nodejs.or
 
 # NodeJs modules
 
-Om de modules te installeren moet u de volgende commando uitvoeren in uw terminal.
+Om de modules te installeren moet u het volgende commando uitvoeren in uw terminal.
 
 ### Install dependecies
 
@@ -37,7 +37,7 @@ Zorg ervoor dat u in de map data-processing/api zit voordat u dit commando uitvo
 
 # Database
 
-In het mapje database vindt u de gehele SQL file om de database te kunnen importeren, van belang is dat indien u een andere gebruikersnaam / wachtwoord heeft voor uw database deze worden aangepast in de CURD.js file. 
+In het mapje database vindt u de gehele SQL file om de database te kunnen importeren, van belang is dat indien u een andere gebruikersnaam/wachtwoord heeft voor uw database deze worden aangepast in de CURD.js file. 
 
 ```javascript
 let con = sql.createConnection({
@@ -51,15 +51,13 @@ let con = sql.createConnection({
 
 # Endpoints
 
-Voor de verschillende tabellen zijn verschillende endpoints gemaakt, hieronder vindt u deze en daarbij een JSON/XML formaat die u kunt gebruiken in bijvoorbeeld postman om deze endpoints uit te testen
+Hieronder bevinden zich de verschillende endpoints die u als gebruiker kan gebruiken om verschillende taken uit te voeren. Ook zal u per endpoint een korte omschrijving vinden met daarbij in wat voor een formaat u de endpoint aan roept. 
 
-De URL van de server: http://localhost:3030
-
-Om naar een endpoint te kunnen bereiken moet de server URL voor de endpoint worden geplaatst.
+De basis URL van de server: http://localhost:3030
 
 ## Country
 
-### Get all countries 
+ Get all countries 
 
 ><code>GET</code>
 >
