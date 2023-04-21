@@ -45,6 +45,7 @@ const validate = (route) => {
            let xml = req.rawBody;
            console.log(xml)
            let schema = xmlSchemas[route];
+           console.error(route, schema)
            xmlValidator.validateXML(xml, schema, function(err, result) {
             //Something went wrong ->
             if(err) {
